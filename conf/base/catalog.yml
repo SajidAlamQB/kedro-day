@@ -5,13 +5,13 @@
 
 cars:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/CarPrice.csv
+  filepath: /dbfs/root/projects/kedro-day/data/01_raw/CarPrice.csv
 
 preprocessed_cars:
   type: pandas.ParquetDataSet
-  filepath: data/02_intermediate/preprocessed_companies.pq
+  filepath: /dbfs/root/projects/kedro-day/data/02_intermediate/preprocessed_companies.pq
 
 model:
   type: pickle.PickleDataSet
-  filepath: data/06_models/regressor.pickle
+  filepath: /dbfs/root/projects/kedro-day/data/06_models/regressor.pickle
   versioned: true
