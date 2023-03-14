@@ -13,7 +13,7 @@ def preprocess_cars(cars: pd.DataFrame) -> pd.DataFrame:
     """
     df1 = cars.copy()
     df1['model'] = [x.split()[0] for x in df1['CarName']]
-    # Fix spelling mistakes in data
+    # Fix spelling mistakes in data and abbreviations
     df1['model'] = df1['model'].replace({'maxda': 'Mazda', 'mazda': 'Mazda',
                                          'nissan': 'Nissan',
                                          'porcshce': 'Porsche', 'porsche': 'Porsche',
